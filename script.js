@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // --- GRÁFICO 2: Tipo de bebidas (Pie - Fila superior) ---
-    const sortedLabelsBebidas = ['No toma (71)', 'Fernet (53)', 'Vino/etc (36)', 'Vodka/Tekila (12)', 'Gancia (11)', 'Cerveza (8)', 'Sidra (8)', 'Ron (4)', 'Otra (1)'];
-    const sortedDataBebidas = [71, 53, 36, 12, 11, 8, 8, 4, 1];
+    const sortedLabelsBebidas = ['0 = No toma (71)', '1 = Cerveza (8)', '2 = Vino/etc (36)', '3 = Gancia (11)','4 = Fernet (53)', '5 = Ron (4)', '6 = Vodka/Tekila (12)', '7 = Sidra (8)',  '8 = Otra (1)'];
+    const sortedDataBebidas = [71, 8, 36, 11, 53, 4, 12, 8, 1];
     const sortedColorsBebidas = ['rgba(200, 200, 200, 0.8)', 'rgba(135, 206, 250, 0.8)', 'rgba(220, 20, 60, 0.8)', 'rgba(0, 255, 255, 0.8)', 'rgba(124, 252, 0, 0.8)', 'rgba(255, 223, 0, 0.8)', 'rgba(255, 192, 203, 0.8)', 'rgba(244, 164, 96, 0.8)', 'rgba(169, 169, 169, 0.8)'];
     const dataTipoBebidasReordered = {
         labels: sortedLabelsBebidas,
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
         labels: ['0=No', '1=Sí'],
         datasets: [{
             label: 'Respuesta',
-            data: [24, 180],
+            data: [18, 186],
             backgroundColor: ['rgba(255, 99, 132, 0.7)', 'rgba(144, 238, 144, 0.7)'],
             borderColor: ['rgba(255, 99, 132, 1)', 'rgba(144, 238, 144, 1)'],
             borderWidth: 1

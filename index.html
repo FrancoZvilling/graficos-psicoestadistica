@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas (3-2, Tamaño Original)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script> -->
+</head>
+<body>
+    <div class="main-container-3-2">
+        <!-- Fila 1 (3 elementos) -->
+        <div class="item-wrapper">
+            <h2>Edades</h2>
+            <canvas id="chartEdades"></canvas>
+        </div>
+        <div class="item-wrapper">
+            <h2>Tipo de bebidas</h2>
+            <canvas id="chartTipoBebidas"></canvas>
+        </div>
+        <div class="item-wrapper table-wrapper">
+            <h2>Frecuencia de consumo</h2>
+            <table id="tableFrecuenciaConsumo">
+                <thead>
+                    <tr><th>Categoría</th><th>f</th><th>f'</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>0= no toma</td><td>69</td><td>69</td></tr>
+                    <tr><td>1= 1 vez al año</td><td>17</td><td>86</td></tr>
+                    <tr><td>2= 2 a 4 veces al año</td><td>38</td><td>124</td></tr>
+                    <tr><td>3= 5 a 10 veces al año</td><td>26</td><td>150</td></tr>
+                    <tr><td>4= 1 vez por mes</td><td>16</td><td>166</td></tr>
+                    <tr><td>5= 2 a 3 veces por mes</td><td>19</td><td>185</td></tr>
+                    <tr><td>6= 1 vez por semana</td><td>8</td><td>193</td></tr>
+                    <tr><td>7= 2 o 3 veces por sem</td><td>9</td><td>202</td></tr>
+                    <tr><td>8= 4 o más veces por sem</td><td>2</td><td>204</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Fila 2 (2 elementos) -->
+        <div class="item-wrapper table-wrapper item-bottom-row">
+            <h2>Amigos varones que toman</h2>
+            <table id="tableAmigos">
+                <thead>
+                    <tr><th>Categoría</th><th>f</th><th>f'</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>0= ninguno</td><td>58</td><td>58</td></tr>
+                    <tr><td>1= pocos</td><td>63</td><td>121</td></tr>
+                    <tr><td>2= varios</td><td>41</td><td>162</td></tr>
+                    <tr><td>3= muchos</td><td>31</td><td>193</td></tr>
+                    <tr><td>4= todos</td><td>11</td><td>204</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="item-wrapper item-bottom-row">
+            <h2>Consumo parental</h2>
+            <canvas id="chartConsumoParental"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

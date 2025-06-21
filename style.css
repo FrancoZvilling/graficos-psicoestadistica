@@ -1,0 +1,114 @@
+:root {
+    --gap: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    color: #555;
+    font-size: 1.0em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.main-container-3-2 {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr; /* 4 columnas para centrar los 2 del medio */
+    gap: var(--gap);
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.item-wrapper {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 250px;
+    overflow: hidden;
+}
+
+.main-container-3-2 > .item-wrapper:nth-child(1) {
+    grid-column: 1 / span 2; /* Ocupa las primeras dos "medias" columnas (0.5fr + 1fr) */
+}
+.main-container-3-2 > .item-wrapper:nth-child(2) {
+    grid-column: 2 / span 2; /* Ocupa las siguientes dos "medias" columnas (1fr + 0.5fr) */
+     /* No, esto no es correcto para 3 items arriba. Necesitamos 3 items arriba.
+        Volvemos a 3 columnas para la primera fila.
+        Y para la segunda fila, necesitamos que los 2 items se centren.
+     */
+}
+/* Reajuste para la primera fila con 3 items */
+.main-container-3-2 {
+    /* Mantenemos 3 columnas principales para los items de la primera fila */
+    /* Pero para centrar la segunda fila, necesitamos una estrategia diferente o más columnas */
+    /* grid-template-columns: repeat(3, 1fr);  */
+    /* Usaremos 6 columnas virtuales para tener más control */
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.main-container-3-2 > .item-wrapper:nth-child(-n+3) { /* Primeros 3 items (fila superior) */
+    grid-column: span 2; /* Cada uno ocupa 2 de las 6 columnas virtuales */
+}
+
+
+/* Centrado de los 2 items de la fila inferior (4to y 5to hijo) */
+.main-container-3-2 > .item-wrapper.item-bottom-row:nth-of-type(4) { /* Amigos Varones */
+    grid-column: 2 / span 2; /* Comienza en la 2da col virtual, ocupa 2 cols virtuales */
+                               /* Esto deja 1 col virtual vacía a la izquierda */
+}
+
+.main-container-3-2 > .item-wrapper.item-bottom-row:nth-of-type(5) { /* Consumo Parental */
+    grid-column: 4 / span 2; /* Comienza en la 4ta col virtual, ocupa 2 cols virtuales */
+                               /* Esto deja 1 col virtual vacía a la derecha y 1 en medio */
+}
+
+
+.table-wrapper {
+    justify-content: center;
+    align-items: stretch;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    font-size: 0.85em;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 6px 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+table td:nth-child(2), table td:nth-child(3) {
+    text-align: right;
+}

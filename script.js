@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // --- GRÁFICO 2: Tipo de bebidas (Pie - Fila superior) ---
-    const sortedLabelsBebidas = ['0 = No toma (71)', '1 = Cerveza (8)', '2 = Vino/etc (36)', '3 = Gancia (11)','4 = Fernet (53)', '5 = Ron (4)', '6 = Vodka/Tekila (12)', '7 = Sidra (8)',  '8 = Otra (1)'];
+    const sortedLabelsBebidas = ['0 = No toma (71)', '1 = Cerveza (8)', '2 = Vino (36)', '3 = Gancia (11)','4 = Fernet (53)', '5 = Ron (4)', '6 = Vodka/Tequila (12)', '7 = Sidra (8)',  '8 = Otra (1)'];
     const sortedDataBebidas = [71, 8, 36, 11, 53, 4, 12, 8, 1];
     const sortedColorsBebidas = ['rgba(200, 200, 200, 0.8)', 'rgba(135, 206, 250, 0.8)', 'rgba(220, 20, 60, 0.8)', 'rgba(0, 255, 255, 0.8)', 'rgba(124, 252, 0, 0.8)', 'rgba(255, 223, 0, 0.8)', 'rgba(255, 192, 203, 0.8)', 'rgba(244, 164, 96, 0.8)', 'rgba(169, 169, 169, 0.8)'];
     const dataTipoBebidasReordered = {
